@@ -1,0 +1,65 @@
+p {margin-bottom: 10px;}
+.headerContainer { 
+    display: flex;
+    padding-bottom: 0;
+}
+.foto {
+    
+    object-fit:cover;
+    max-height: 450px;
+    
+}
+.headerSection {
+    padding-left: 40px;
+}
+.mainInfo {
+    padding-top: 10px;
+    padding-left: 60px;
+    &__name {
+        font-family: $accent-font;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        font-size: 90px;
+        margin-bottom: 10px;
+    }
+    &__specialization{
+        color: $accent-color;
+        font-family: $high-accent-font;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+}
+
+.contactsList {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+.sectionsList {
+    display: flex;
+    .sectionsList__item{margin-right: 40px;}
+    .sectionsList__item:first-child{
+        max-width: 35%;
+    }
+    .sectionsList__item:nth-child(2){
+        max-width: 35%;
+    }
+    .sectionsList__item:last-child{
+        max-width: 30%;
+        margin-right: 0;
+    }
+}
+.section__title{
+    color: $accent-color;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: $accent-font;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+
+}

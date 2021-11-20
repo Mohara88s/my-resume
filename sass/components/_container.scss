@@ -1,0 +1,38 @@
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 70px;
+    padding-right: 70px;
+    background-color: $additional-color;
+    position: relative;
+
+    &__strip--dark {
+        width: 1200px;
+        height: 30px;
+        margin-left: auto;
+    margin-right: auto;
+        background-color: $main-color;
+    }
+    &__strip--white {
+        width: 1200px;
+        height: 30px;
+        margin-left: auto;
+    margin-right: auto;
+        background-color: $additional-color;
+    }
+
+    &__line {
+        width: 1060px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 2px;
+        background-color: $main-color;
+        position: absolute;
+        bottom: 0;
+        
+
+    }
+}

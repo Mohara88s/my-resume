@@ -319,7 +319,7 @@ body {
   background-color: #A6A6A6;
   color: #272727;
   font-family: "Montserrat-SemiBoldItalic", sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.4;
   letter-spacing: 0.03em;
 }
@@ -386,6 +386,7 @@ p {
 .mainInfo {
   padding-top: 10px;
   padding-left: 60px;
+  padding-bottom: 20px;
 }
 
 .mainInfo__name {
@@ -393,7 +394,7 @@ p {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  font-size: 90px;
+  font-size: 95px;
   margin-bottom: 10px;
 }
 
@@ -402,7 +403,7 @@ p {
   font-family: "Montserrat-ExtraBold", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
   font-size: 30px;
   margin-bottom: 40px;
 }
@@ -448,5 +449,9 @@ p {
   font-size: 30px;
   font-weight: 500;
   letter-spacing: 0.1em;
+}
+
+.sectionProjects__link {
+  display: inline-block;
 }
 /*# sourceMappingURL=main.css.map */

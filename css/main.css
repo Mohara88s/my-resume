@@ -380,6 +380,10 @@ section {
   padding-bottom: 20px;
 }
 
+.headerContainer {
+  padding-top: 40px;
+}
+
 .foto {
   -o-object-fit: cover;
      object-fit: cover;
@@ -391,6 +395,7 @@ section {
 .mainInfo {
   padding-top: 10px;
   padding-bottom: 20px;
+  text-align: center;
 }
 
 .mainInfo__name {
@@ -424,6 +429,7 @@ section {
   font-size: 30px;
   font-weight: 500;
   letter-spacing: 0.1em;
+  text-align: center;
 }
 
 .sectionProjects__list .sectionProjects__item {
@@ -439,7 +445,6 @@ section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-top: 40px;
   }
   .foto {
     max-height: 500px;
@@ -449,6 +454,7 @@ section {
   }
   .mainInfo {
     padding-left: 60px;
+    text-align: left;
   }
   .contactsList {
     display: -webkit-box;
@@ -458,6 +464,9 @@ section {
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding-right: 10px;
+  }
+  .section__title {
+    text-align: left;
   }
   .sectionsList {
     display: -webkit-box;

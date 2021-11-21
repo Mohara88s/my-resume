@@ -49,3 +49,31 @@
         }
     }
 }
+@media print {
+    body {
+        margin-top: -70px;
+    }
+    .container {
+        width: 1200px;
+        padding-left: 20px;
+        padding-right: 120px;
+
+        &__strip--dark {
+            width: 1200px;
+        }
+
+        &__strip--white {
+            width: 1200px;
+        }
+    
+        &__line {
+            width: 1060px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 2px;
+            background-color: $main-color;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}

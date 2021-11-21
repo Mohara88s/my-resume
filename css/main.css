@@ -451,6 +451,14 @@ p {
   letter-spacing: 0.1em;
 }
 
+.sectionProjects__list .sectionProjects__item {
+  margin-bottom: 10px;
+}
+
+.sectionProjects__list .sectionProjects__item:first-child {
+  margin-bottom: 50px;
+}
+
 .sectionProjects__link {
   display: inline-block;
 }

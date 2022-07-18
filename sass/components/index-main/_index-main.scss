@@ -86,7 +86,9 @@ section {
     }
     .sectionsList {
         display: flex;
-        .sectionsList__item{margin-right: 40px;}
+        .sectionsList__item{
+            margin-right: 40px;
+        }
         .sectionsList__item:first-child{
             max-width: 35%;
         }
@@ -96,11 +98,6 @@ section {
         .sectionsList__item:last-child{
             max-width: 30%;
             margin-right: 0;
-        }
-    }
-    .sectionProjects__list {
-        .sectionProjects__item:first-child {
-            margin-bottom: 50px;
         }
     }
 }
@@ -139,11 +136,6 @@ section {
         .sectionsList__item:last-child{
             max-width: 30%;
             margin-right: 0;
-        }
-    }
-    .sectionProjects__list {
-        .sectionProjects__item:first-child {
-            margin-bottom: 50px;
         }
     }
 }

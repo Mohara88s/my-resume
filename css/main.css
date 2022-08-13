@@ -329,8 +329,10 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 40px;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
   background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 900px) {
@@ -358,8 +360,8 @@ p {
 
 section {
   display: block;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .foto {
@@ -401,7 +403,7 @@ section {
 
 .section__title {
   color: #C2331A;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   margin-left: 5px;
   text-transform: uppercase;
   font-family: "Bebas_Neue_Cyrillic", sans-serif;
@@ -433,6 +435,26 @@ section {
   margin-left: auto;
   margin-right: auto;
   background-color: #ffffff;
+}
+
+.pdfConverter {
+  width: 60px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  opacity: 0;
+  -webkit-transform: translateX(120%);
+          transform: translateX(120%);
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container:hover .pdfConverter {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 @media screen and (min-width: 900px) {

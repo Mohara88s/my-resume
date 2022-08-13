@@ -3,8 +3,10 @@
     margin-left: auto;
     margin-right: auto;
     padding: 40px;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
     background-color: $additional-color;
+    position: relative;
+    overflow: hidden;
 }
 
 @media screen and (min-width: 900px){

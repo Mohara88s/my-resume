@@ -76,18 +76,31 @@ section {
     margin-right: auto;
     background-color: $additional-color;
 }
-
-.pdfConverter {
-    width: 60px;
+.functionalButtonsBox{
     position: absolute;
     top:10px;
     right: 10px;
+  
+}
+.pdfConverter {
+    width: 60px;  
+    margin-bottom: 20px;  
     opacity: 0;
     transform: translateX(120%);
     transition-duration: 1000ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    .container:hover & {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
-.pdfConverter {
+.print {
+    width: 60px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateX(120%);
+    transition-duration: 1500ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     .container:hover & {
         opacity: 1;
         transform: translateX(0);
@@ -107,7 +120,6 @@ section {
     }
     .mainInfo {
         padding-left: 60px;
-        text-align: left;
     }
     .contactsList {
         display: flex;
@@ -168,7 +180,6 @@ section {
     }
     .mainInfo {
         padding-left: 60px;
-        text-align: left;
     }
     .contactsList {
         display: flex;

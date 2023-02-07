@@ -438,11 +438,15 @@ section {
   background-color: #ffffff;
 }
 
-.pdfConverter {
-  width: 60px;
+.functionalButtonsBox {
   position: absolute;
   top: 10px;
   right: 10px;
+}
+
+.pdfConverter {
+  width: 60px;
+  margin-bottom: 20px;
   opacity: 0;
   -webkit-transform: translateX(120%);
           transform: translateX(120%);
@@ -453,6 +457,24 @@ section {
 }
 
 .container:hover .pdfConverter {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.print {
+  width: 60px;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transform: translateX(120%);
+          transform: translateX(120%);
+  -webkit-transition-duration: 1500ms;
+          transition-duration: 1500ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container:hover .print {
   opacity: 1;
   -webkit-transform: translateX(0);
           transform: translateX(0);
@@ -472,7 +494,6 @@ section {
   }
   .mainInfo {
     padding-left: 60px;
-    text-align: left;
   }
   .contactsList {
     display: -webkit-box;
@@ -538,7 +559,6 @@ section {
   }
   .mainInfo {
     padding-left: 60px;
-    text-align: left;
   }
   .contactsList {
     display: -webkit-box;

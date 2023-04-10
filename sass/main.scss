@@ -3,7 +3,9 @@
 @import "../sass/utils/fonts";
 @import "../sass/utils/variables";
 @import "../sass/utils/common";
+@import '../sass/utils/trans-func-mixin';
 
 // components
 @import "../sass/components/container";
 @import "../sass/components/index-main/index-main";
+@import '../sass/components/index-main/modal';

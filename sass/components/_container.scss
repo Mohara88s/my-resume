@@ -2,11 +2,14 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding: 40px;
+    padding: 30px;
     padding-bottom: 0px;
     background-color: $additional-color;
     position: relative;
     overflow: hidden;
+    border: none;
+    border-bottom: 30px solid $main-color;
+    border-top: 30px solid $main-color;
 }
 
 @media screen and (min-width: 900px){

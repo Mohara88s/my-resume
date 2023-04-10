@@ -13,8 +13,7 @@
     <title>Resume Vitalii Vasylets</title>
   </head>
   <body>
-    <div class="strip--white"></div>
-    <div class="strip--dark"></div>
+    <hr class="strip--top">
     <div class="container">
       <div class="header">
         <img
@@ -92,7 +91,7 @@
           </ul>
         </section>
 
-        <div class="sections__line"></div>
+        <hr class="sections__line">
       </div>
 
       <div class="sections__container">
@@ -287,7 +286,7 @@
             </section>
           </li>
         </ul>
-        <div class="sections__line"></div>
+        <hr class="sections__line">
       </div>
 
       <div class="sections__container">
@@ -365,19 +364,55 @@
         </ul>
       </div>
       <div class="functionalButtonsBox">
-        <a
-          class="pdfConverter"
-          onclick="this.setAttribute('href', 'https://v2.convertapi.com/convert/web/to/pdf?secret=HGTNzhE6AD9oHtUa&download=attachment&url=https%3A%2F%2Fmohara88s.github.io%2Fmy-resume%2F&FileName=VitaliiVasyletsFullStackResume&ViewportWidth=1202&ViewportHeight=1800&MarginTop=0&MarginRight=0&MarginBottom=0&MarginLeft=0' )"
-          href="https://mohara88s.github.io/my-resume/index.html"
-        >
-          <img src="./images/pdf-icon.png" alt="pdf icon" />
+        <a class="pdfConverter">
+          <img src="./images/pdf-icon.png" alt="pdf icon" data-modal-open />
         </a>
+
         <a class="print" onclick="window.print();">
           <img src="./images/print-icon.png" alt="print icon" />
         </a>
       </div>
     </div>
-    <div class="strip--dark"></div>
-    <div class="strip--white"></div>
+    <hr class="strip--bottom" >
+
+    <!-- modal -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal__close" data-modal-close>
+          <svg width="18" height="18">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <p class="modal__header">Download the PDF version of my resume</p>
+        <ul class="modal-list">
+          <li class="modal-list-item">
+            <a
+              onclick="this.setAttribute('href', 'https://v2.convertapi.com/convert/web/to/pdf?secret=HGTNzhE6AD9oHtUa&download=attachment&url=https%3A%2F%2Fmohara88s.github.io%2Fmy-resume%2F&FileName=VitaliiVasyletsFullStackResume&ViewportWidth=1202&ViewportHeight=1800&MarginTop=0&MarginRight=0&MarginBottom=0&MarginLeft=0' )"
+              href="https://mohara88s.github.io/my-resume/index.html"
+            >
+              <svg width="25" height="25">
+                <use href="./images/icons.svg#icon-file-download"></use>
+              </svg>
+              <p>use ConvertAPI to create the file</p>
+            </a>
+          </li>
+
+          <li class="modal-list-item">
+            <a
+              href="./public/VitaliiVasyletsFullStackResume.pdf"
+              target="_blank"
+            >
+            <svg width="25" height="25">
+              <use href="./images/icons.svg#icon-file-download"></use>
+            </svg>
+              <p>the file from my GitHub</p>
+              </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>

@@ -60,6 +60,9 @@ section {
 .sectionProjects__link {
     display: inline-block;
 }
+.sections__line {
+    border: none;
+}
 
 .strip--top,
 .strip--bottom {
@@ -84,6 +87,7 @@ section {
     transform: translateX(120%);
     transition-duration: 1000ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
     .container:hover & {
         opacity: 1;
         transform: translateX(0);
@@ -149,10 +153,8 @@ section {
         margin-left: auto;
         margin-right: auto;
         height: 3px;
-        // background-color: $main-color;
         position: absolute;
         bottom: 0;
-        border: none;
         border-bottom: 3px solid $main-color;
     }
 

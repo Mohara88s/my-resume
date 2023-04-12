@@ -1,0 +1,99 @@
+.modalEnglish__Backdrop {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .modalEnglish {
+    width: 100%;
+    max-width: 942px;
+    max-height: 695px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: scale(0);
+    padding: 50px;
+    background-color: $additional-color; 
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+  
+  .modalEnglish__CloseBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    fill: $main-color;
+    background-color: $additional-color;
+    border-radius: 50%;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+ 
+    &:hover,
+    &:focus {
+      fill: $accent-color;
+      border: 3px solid $main-color;
+    }
+  }
+
+  .modalEnglish__LeftBtn,
+  .modalEnglish__RightBtn {
+    position: absolute;
+    top: 15%;
+    width: 7%;
+    height: 70%;
+    background-color: transparent;
+    fill: $additional-color;
+    border: none;   
+    cursor: pointer;
+
+    &:hover {
+      fill: $main-color;
+      scale: 1.2;
+    }
+  }
+  .modalEnglish__LeftBtn {
+    left: 0px;
+  }
+  .modalEnglish__RightBtn {
+    right: 0px;
+  }
+  
+  .certificatesList {
+    display: flex;
+    width: 300%;
+    &__container {
+      overflow: hidden;
+    }
+    & li {
+      width: 100%;
+    }
+  }
+
+  @media print {
+    .modalEnglish {
+      top: 100%;
+      left: 20%;
+      transform: scale(1);
+      padding: 0;
+      box-shadow:none
+    }
+    .modalEnglish__CloseBtn {
+      opacity: 0;    
+    }
+
+    .certificatesList {
+      flex-direction: column;
+      & li{
+        width: 730px;
+      }
+    }
+  }

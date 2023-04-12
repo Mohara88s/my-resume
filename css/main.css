@@ -307,6 +307,11 @@ a {
   text-decoration: none;
   color: inherit;
   display: block;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #C2331A;
 }
 
 img {
@@ -425,6 +430,10 @@ section {
   display: inline-block;
 }
 
+.sections__line {
+  border: none;
+}
+
 .strip--top,
 .strip--bottom {
   width: 100%;
@@ -452,6 +461,7 @@ section {
           transition-duration: 1000ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 
 .container:hover .pdfConverter {
@@ -533,7 +543,6 @@ section {
     height: 3px;
     position: absolute;
     bottom: 0;
-    border: none;
     border-bottom: 3px solid #272727;
   }
   .strip--top,
@@ -695,5 +704,122 @@ section {
   display: -ms-flexbox;
   display: flex;
   padding: 10px;
+}
+
+.modalEnglish__Backdrop {
+  position: fixed;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modalEnglish {
+  width: 100%;
+  max-width: 942px;
+  max-height: 695px;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  padding: 50px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modalEnglish__CloseBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  width: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  fill: #272727;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.modalEnglish__CloseBtn:hover, .modalEnglish__CloseBtn:focus {
+  fill: #C2331A;
+  border: 3px solid #272727;
+}
+
+.modalEnglish__LeftBtn,
+.modalEnglish__RightBtn {
+  position: absolute;
+  top: 15%;
+  width: 7%;
+  height: 70%;
+  background-color: transparent;
+  fill: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.modalEnglish__LeftBtn:hover,
+.modalEnglish__RightBtn:hover {
+  fill: #272727;
+  scale: 1.2;
+}
+
+.modalEnglish__LeftBtn {
+  left: 0px;
+}
+
+.modalEnglish__RightBtn {
+  right: 0px;
+}
+
+.certificatesList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300%;
+}
+
+.certificatesList__container {
+  overflow: hidden;
+}
+
+.certificatesList li {
+  width: 100%;
+}
+
+@media print {
+  .modalEnglish {
+    top: 100%;
+    left: 20%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    padding: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .modalEnglish__CloseBtn {
+    opacity: 0;
+  }
+  .certificatesList {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .certificatesList li {
+    width: 730px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

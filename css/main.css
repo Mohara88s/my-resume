@@ -26,10 +26,8 @@ Use a more readable tab size (opinionated).
 2. Prevent adjustments of font size after orientation changes in iOS.
 */
 html {
-  line-height: 1.15;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /*
@@ -59,10 +57,8 @@ Grouping content
 2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
 */
 hr {
-  height: 0;
-  /* 1 */
-  color: inherit;
-  /* 2 */
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
 }
 
 /*
@@ -93,10 +89,8 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /**
@@ -134,10 +128,8 @@ Tabular data
 2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
 */
 table {
-  text-indent: 0;
-  /* 1 */
-  border-color: inherit;
-  /* 2 */
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
 }
 
 /*
@@ -153,14 +145,10 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
 }
 
 /**
@@ -177,9 +165,9 @@ select {
 Correct the inability to style clickable types in iOS and Safari.
 */
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -232,11 +220,9 @@ Correct the cursor style of increment and decrement buttons in Safari.
 1. Correct the odd appearance in Chrome and Safari.
 2. Correct the outline style in Safari.
 */
-[type='search'] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
 }
 
 /**
@@ -251,10 +237,8 @@ Remove the inner padding in Chrome and Safari on macOS.
 2. Change font properties to 'inherit' in Safari.
 */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
 
 /*
@@ -269,25 +253,21 @@ summary {
 }
 
 @font-face {
-  font-family: 'Bebas_Neue_Cyrillic';
+  font-family: "Bebas_Neue_Cyrillic";
   src: url(../fonts/Bebas_Neue_Cyrillic.ttf);
 }
-
 @font-face {
-  font-family: 'Montserrat-SemiBold';
+  font-family: "Montserrat-SemiBold";
   src: url(../fonts/Montserrat-SemiBold.ttf);
 }
-
 @font-face {
-  font-family: 'Montserrat-SemiBoldItalic';
+  font-family: "Montserrat-SemiBoldItalic";
   src: url(../fonts/Montserrat-SemiBoldItalic.ttf);
 }
-
 @font-face {
-  font-family: 'Montserrat-ExtraBold';
+  font-family: "Montserrat-ExtraBold";
   src: url(../fonts/Montserrat-ExtraBold.ttf);
 }
-
 h1,
 h2,
 h3,
@@ -309,7 +289,6 @@ a {
   display: block;
   cursor: pointer;
 }
-
 a:hover {
   color: #C2331A;
 }
@@ -351,7 +330,6 @@ body {
     padding-bottom: 1px;
   }
 }
-
 @media print {
   body {
     margin-top: -70px;
@@ -362,7 +340,6 @@ body {
     padding-right: 120px;
   }
 }
-
 p {
   margin-bottom: 10px;
 }
@@ -386,7 +363,6 @@ section {
   padding-bottom: 20px;
   text-align: center;
 }
-
 .mainInfo__name {
   font-family: "Bebas_Neue_Cyrillic", sans-serif;
   font-weight: 500;
@@ -395,7 +371,6 @@ section {
   font-size: 95px;
   margin-bottom: 10px;
 }
-
 .mainInfo__specialization {
   color: #C2331A;
   font-family: "Montserrat-ExtraBold", sans-serif;
@@ -463,7 +438,6 @@ section {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
-
 .container:hover .modalPDFdownload__OpenBtn {
   opacity: 1;
   -webkit-transform: translateX(0);
@@ -481,7 +455,6 @@ section {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .container:hover .print {
   opacity: 1;
   -webkit-transform: translateX(0);
@@ -546,11 +519,10 @@ section {
     border-bottom: 3px solid #272727;
   }
   .strip--top,
-  .strip--bottom {
+.strip--bottom {
     width: 1200px;
   }
 }
-
 @media print {
   .header {
     display: -webkit-box;
@@ -617,7 +589,6 @@ section {
     display: none;
   }
 }
-
 .modalPDFdownload__Backdrop {
   position: fixed;
   top: -100%;
@@ -632,8 +603,6 @@ section {
   position: absolute;
   top: 20%;
   left: 50%;
-  -webkit-transform: scale(0);
-          transform: scale(0);
   padding: 55px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -667,7 +636,6 @@ section {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .modalPDFdownload__CloseBtn:hover, .modalPDFdownload__CloseBtn:focus {
   fill: #C2331A;
   border: 3px solid #272727;
@@ -681,7 +649,6 @@ section {
   fill: #C2331A;
   color: #C2331A;
 }
-
 .modalPDFdownload-list__item a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -694,13 +661,11 @@ section {
     min-width: 40vw;
   }
 }
-
 @media print {
   .modalPDFdownload__Backdrop {
     display: none;
   }
 }
-
 .modalEnglish__Backdrop {
   position: fixed;
   top: 100%;
@@ -711,6 +676,9 @@ section {
 }
 
 .modalEnglish {
+  position: fixed;
+  top: 100%;
+  left: 50%;
   padding: 55px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -744,7 +712,6 @@ section {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .modalEnglish__CloseBtn:hover, .modalEnglish__CloseBtn:focus {
   fill: #C2331A;
   border: 3px solid #272727;
@@ -774,13 +741,11 @@ section {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .modalEnglish__LeftBtn:hover,
 .modalEnglish__RightBtn:hover {
   fill: #C2331A;
   scale: 1.2;
 }
-
 .modalEnglish__LeftBtn svg,
 .modalEnglish__RightBtn svg {
   -webkit-transform: rotate(-90deg);
@@ -790,7 +755,6 @@ section {
 .modalEnglish__LeftBtn {
   left: 0px;
 }
-
 .modalEnglish__LeftBtn svg {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
@@ -799,7 +763,6 @@ section {
 .modalEnglish__RightBtn {
   right: 0px;
 }
-
 .modalEnglish__RightBtn svg {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
@@ -809,16 +772,14 @@ section {
   width: 100%;
   height: 100%;
 }
-
 .certificatesList__container {
   position: relative;
   width: 70vw;
-  height: calc(595/842*70vw);
+  height: 49.4655581948vw;
   max-width: 842px;
   max-height: 595px;
   overflow: hidden;
 }
-
 .certificatesList li {
   width: 100%;
   position: absolute;
@@ -828,13 +789,15 @@ section {
 
 @media print {
   .modalEnglish {
+    top: 100%;
+    left: 40%;
     padding: 0;
     -webkit-box-shadow: none;
             box-shadow: none;
   }
   .modalEnglish__CloseBtn,
-  .modalEnglish__RightBtn,
-  .modalEnglish__LeftBtn {
+.modalEnglish__RightBtn,
+.modalEnglish__LeftBtn {
     display: none;
   }
   .certificatesList {
@@ -850,5 +813,4 @@ section {
     width: 730px;
     position: static;
   }
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

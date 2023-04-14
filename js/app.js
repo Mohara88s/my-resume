@@ -89,6 +89,7 @@ function changeSlideRight() {
   if (isSlideAnimating) {
     return;
   }
+  isSlideAnimating = true;
   actualSlide++;
   if (actualSlide <= slidesQuantity) {
     previousSlide = actualSlide - 1;
@@ -103,6 +104,7 @@ function changeSlideLeft() {
   if (isSlideAnimating) {
     return;
   }
+  isSlideAnimating = true;
   actualSlide--;
   if (actualSlide === 0) {
     actualSlide = slidesQuantity;
@@ -141,7 +143,10 @@ function animatingSlideRight() {
       { x: '-100%' },
       { duration: 1, x: '-200%' },
       '-=1',
-    );
+    )
+    .call(() => {
+      isSlideAnimating = false;
+    });
 }
 
 function animatingSlideLeft() {
@@ -155,12 +160,10 @@ function animatingSlideLeft() {
   var slideAnimation = gsap.timeline();
   slideAnimation
     .fromTo(actualSlideObject, { x: '-200%' }, { duration: 1, x: '-100%' })
-    .fromTo(
-      previousSlideObject,
-      { x: '-100%' },
-      { duration: 1, x: '0' },
-      '-=1',
-    );
+    .fromTo(previousSlideObject, { x: '-100%' }, { duration: 1, x: '0' }, '-=1')
+    .call(() => {
+      isSlideAnimating = false;
+    });
 }
 
 // modalPDFdownload

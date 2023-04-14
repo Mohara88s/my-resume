@@ -811,6 +811,6 @@ section {
   }
   .certificatesList li {
     width: 730px;
-    position: static;
+    position: sticky;
   }
 }/*# sourceMappingURL=main.css.map */

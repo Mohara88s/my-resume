@@ -12,18 +12,17 @@ const refs = {
     modalEnglishLeftBtn: document.querySelector('.modalEnglish__LeftBtn'),  
     modalEnglishRightBtn: document.querySelector('.modalEnglish__RightBtn'), 
     certificatesList: document.querySelector('.certificatesList'), 
+    modal: document.querySelector('.modalPDFdownload'),
+    modalBackdrop: document.querySelector('.modalPDFdownload__Backdrop'),
+    modalCloseBtn: document.querySelector('.modalPDFdownload__CloseBtn'),
+    modalOpenBtn: document.querySelector('.modalPDFdownload__OpenBtn'),
   };
-
+// modalEnglish
 var showModalEnglish = gsap.timeline();
-showModalEnglish.pause();
-showModalEnglish.to(refs.modalEnglishBackdrop, 0.6, { y: '-100%'});
-showModalEnglish.to(refs.modalEnglish, 0.6, { scale: 1, x:'-50%', y:'-50%'});
-
-// var changeCerificates = gsap.timeline();
-// changeCerificates.pause();
-// changeCerificates.to(refs.certificatesList, 0.6, { x: '-33.33%'});
-// changeCerificates.addPause();
-// changeCerificates.to(refs.certificatesList, 0.6, { x: '-66.66%'});
+showModalEnglish.pause()
+.to(refs.modalEnglishBackdrop, 0.6, { y: '-100%'})
+.fromTo(refs.modalEnglish, { x: '-50%', y:'+50%' }, { duration: 1.5, x: '-50%', y: '-50%', scale: 1}, "-=1");
+// showModalEnglish.to(refs.modalEnglish, 0.6, { scale: 1, x:'-50%', y:'-50%'});
 
 refs.modalEnglishOpenBtn.addEventListener('click', onModalEnglishOpenBtnClick)
 
@@ -52,6 +51,7 @@ function onModalEnglishRightBtnClick() {
 function onKeydown(event) {
   if (event.code === 'Escape') {
     showModalEnglish.reverse();
+    showModal.reverse();
   }
   if (event.code === 'ArrowRight') {
     onArrowRightKeydown()
@@ -66,8 +66,6 @@ function onArrowLeftKeydown() {
 function onArrowRightKeydown() {
   changeSlideRight();
 }
-
-
 
 function changeSlideRight() {
 if (isSlideAnimating) {return}
@@ -116,3 +114,27 @@ function animatingSlideLeft() {
   slideAnimation.fromTo(actualSlideObject, { x: '-200%' }, { duration: 1, x: '-100%' })
   .fromTo(previousSlideObject, { x: '-100%' }, { duration: 1, x: '0'}, "-=1")
 }
+
+// modalPDFdownload 
+var showModal = gsap.timeline();
+showModal.pause()
+.to(refs.modalBackdrop, 0.6, { y: '+100%'})
+.fromTo(refs.modal, { x: '-50%', y:'-50%' }, { duration: 1.5, x: '-50%', y: '+50%', scale: 1}, "-=1");
+// .to(refs.modal, 0.6, { scale: 1, x:'-50%', y:'+50%'});
+
+refs.modalOpenBtn.addEventListener('click', onModalOpenBtnClick)
+
+function onModalOpenBtnClick() {
+  showModal.play();
+  refs.modalCloseBtn.addEventListener('click', onModalCloseBtnClick)
+  refs.modalBackdrop.addEventListener('click', onModalBackdropClick)
+  window.addEventListener('keydown', onKeydown)
+}
+function onModalCloseBtnClick() {
+showModal.reverse();
+}
+function onModalBackdropClick(event) {
+if (!event.target.classList.contains('modalPDFdownload__Backdrop')) { return }
+showModal.reverse();
+}
+

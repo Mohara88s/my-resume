@@ -1,42 +1,27 @@
-.backdrop {
+.modalPDFdownload__Backdrop {
     position: fixed;
-    top: 0;
+    top: -100%;
     left: 0;
     width: 100%;
     height: 100%;
-  
-    opacity: 1;
-    @include trans-func();
     background-color: rgba(0, 0, 0, 0.3);
   }
-  .is-hidden {
-    opacity: 0;
-    pointer-events: none;
-  }
-  
-  .modal {
+ 
+  .modalPDFdownload {
     min-width: 80vw;
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1);
+    transform: scale(0);
     padding: 55px;
-
-    @include trans-func();
     background-color: $additional-color;
-    
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-
     fill: $main-color;
-  
-    .backdrop.is-hidden & {
-      transform: translate(0, -300%) scale(0.2);
-    }
   }
   
-  .modal__close {
+  .modalPDFdownload__CloseBtn {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -46,24 +31,24 @@
     padding: 0;
     justify-content: center;
     align-items: center;
-  
     background-color: $additional-color;
     border-radius: 50%;
     border: 3px solid rgba(0, 0, 0, 0.2);
-  
+    cursor: pointer;
     @include trans-func();
-  
+
     &:hover,
     &:focus {
       fill: $accent-color;
       border: 3px solid $main-color;
     }
   }
-  .modal__header {
+
+  .modalPDFdownload__header {
     font-size: 18px;
   }
   
-  .modal-list-item {
+  .modalPDFdownload-list__item {
       &:hover,
       &:focus {
         a {
@@ -78,7 +63,13 @@
     }
     
     @media screen and (min-width: 900px) {
-      .modal {
+      .modalPDFdownload {
         min-width: 40vw
+      }
+    }
+
+    @media print {
+      .modalPDFdownload__Backdrop {
+        display: none;
       }
     }

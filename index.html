@@ -366,7 +366,7 @@
         </ul>
       </div>
       <div class="functionalButtonsBox">
-        <a class="pdfConverter">
+        <a class="modalPDFdownload__OpenBtn">
           <img src="./images/pdf-icon.png" alt="pdf icon" data-modal-open />
         </a>
 
@@ -377,18 +377,18 @@
     </div>
     <hr class="strip--bottom" />
 
-    <!-- modal download pdf-->
-    <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
-        <button class="modal__close" data-modal-close>
+    <!-- modal PDF download -->
+    <div class="modalPDFdownload__Backdrop">
+      <div class="modalPDFdownload">
+        <button class="modalPDFdownload__CloseBtn">
           <svg width="25" height="25">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
 
-        <p class="modal__header">Download the PDF version of my resume</p>
-        <ul class="modal-list">
-          <li class="modal-list-item">
+        <p class="modalPDFdownload__header">Download the PDF version of my resume</p>
+        <ul class="modalPDFdownload-list">
+          <li class="modalPDFdownload-list__item">
             <a
               onclick="this.setAttribute('href', 'https://v2.convertapi.com/convert/web/to/pdf?secret=HGTNzhE6AD9oHtUa&download=attachment&url=https%3A%2F%2Fmohara88s.github.io%2Fmy-resume%2F&FileName=VitaliiVasyletsFullStackResume&ViewportWidth=1202&ViewportHeight=1800&MarginTop=0&MarginRight=0&MarginBottom=0&MarginLeft=0' )"
               href="https://mohara88s.github.io/my-resume/index.html"
@@ -400,7 +400,7 @@
             </a>
           </li>
 
-          <li class="modal-list-item">
+          <li class="modalPDFdownload-list__item">
             <a
               href="./public/VitaliiVasyletsFullStackResume.pdf"
               target="_blank"
@@ -461,6 +461,5 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src=".//js/app.js"></script>
-    <script src="./js/modal.js"></script>
   </body>
 </html>

@@ -676,8 +676,8 @@ section {
 }
 
 .modalEnglish {
-  position: fixed;
-  top: 100%;
+  position: absolute;
+  top: 50%;
   left: 50%;
   padding: 55px;
   background-color: #ffffff;
@@ -736,6 +736,7 @@ section {
       -ms-flex-align: center;
           align-items: center;
   padding: 0;
+  scale: 0;
   -webkit-transition-duration: 600ms;
           transition-duration: 600ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -753,7 +754,7 @@ section {
 }
 
 .modalEnglish__LeftBtn {
-  left: 0px;
+  left: -40%;
 }
 .modalEnglish__LeftBtn svg {
   -webkit-transform: rotate(-90deg);
@@ -761,7 +762,7 @@ section {
 }
 
 .modalEnglish__RightBtn {
-  right: 0px;
+  right: -40%;
 }
 .modalEnglish__RightBtn svg {
   -webkit-transform: rotate(90deg);
@@ -789,8 +790,8 @@ section {
 
 @media print {
   .modalEnglish {
-    top: 100%;
-    left: 40%;
+    top: 0;
+    left: 20%;
     padding: 0;
     -webkit-box-shadow: none;
             box-shadow: none;
@@ -811,6 +812,6 @@ section {
   }
   .certificatesList li {
     width: 730px;
-    position: sticky;
+    position: static;
   }
 }/*# sourceMappingURL=main.css.map */

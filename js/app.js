@@ -16,23 +16,12 @@ const refs = {
   modalCloseBtn: document.querySelector('.modalPDFdownload__CloseBtn'),
   modalOpenBtn: document.querySelector('.modalPDFdownload__OpenBtn'),
 };
-// modalEnglish
-var showModalEnglish = gsap.timeline();
-showModalEnglish
-  .pause()
-  .to(refs.modalEnglishBackdrop, 1, { y: '-100%' })
-  .fromTo(
-    refs.modalEnglish,
-    { x: '-50%', y: '0' },
-    { duration: 1, x: '-50%', y: '-100%' },
-    '-=0.5',
-  );
 
+// modalEnglish
 refs.modalEnglishOpenBtn.addEventListener('click', onModalEnglishOpenBtnClick);
 
 function onModalEnglishOpenBtnClick() {
-  firstSlidePosition();
-  showModalEnglish.play();
+  openModalEnglishAnimation();
   refs.modalEnglishCloseBtn.addEventListener(
     'click',
     onModalEnglishCloseBtnClick,
@@ -51,14 +40,43 @@ function onModalEnglishOpenBtnClick() {
   );
   window.addEventListener('keydown', onKeydown);
 }
+
+function openModalEnglishAnimation() {
+  firstSlidePosition();
+  var showModalEnglish = gsap.timeline();
+  showModalEnglish
+    .to(refs.modalEnglishBackdrop, 1.5, { y: '-100%' })
+    .fromTo(
+      refs.modalEnglish,
+      { x: '-50%', y: '0' },
+      { duration: 1.5, x: '-50%', y: '-50%' },
+      '-=1',
+    )
+    .to(refs.modalEnglishLeftBtn, 0.5, { x: '+500%', scale: 1 }, '-=1')
+    .to(refs.modalEnglishRightBtn, 0.5, { x: '-500%', scale: 1 }, '-=1');
+}
+function closeModalEnglishAnimation() {
+  var closeModalEnglish = gsap.timeline();
+  closeModalEnglish
+    .to(refs.modalEnglishLeftBtn, 0.3, { x: '-500%', scale: 0 })
+    .to(refs.modalEnglishRightBtn, 0.3, { x: '+500%', scale: 0 }, '-=0.3')
+    .fromTo(
+      refs.modalEnglish,
+      { x: '-50%', y: '-50%' },
+      { duration: 1.5, x: '-50%', y: '0' },
+      '+=0.5',
+    )
+    .to(refs.modalEnglishBackdrop, 1, { y: '+100%' }, '-=1');
+}
+
 function onModalEnglishCloseBtnClick() {
-  showModalEnglish.reverse();
+  closeModalEnglishAnimation();
 }
 function onModalEnglishBackdropClick(event) {
   if (!event.target.classList.contains('modalEnglish__Backdrop')) {
     return;
   }
-  showModalEnglish.reverse();
+  closeModalEnglishAnimation();
 }
 function onModalEnglishLeftBtnClick() {
   changeSlideLeft();
@@ -68,7 +86,7 @@ function onModalEnglishRightBtnClick() {
 }
 function onKeydown(event) {
   if (event.code === 'Escape') {
-    showModalEnglish.reverse();
+    closeModalEnglishAnimation();
     showModal.reverse();
   }
   if (event.code === 'ArrowRight') {

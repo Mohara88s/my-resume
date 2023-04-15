@@ -45,28 +45,28 @@ function openModalEnglishAnimation() {
   firstSlidePosition();
   var showModalEnglish = gsap.timeline();
   showModalEnglish
-    .to(refs.modalEnglishBackdrop, 1.5, { y: '-100%' })
+    .to(refs.modalEnglishBackdrop, 1.5, { y: '-100%', autoAlpha: 1 })
     .fromTo(
       refs.modalEnglish,
       { x: '-50%', y: '0' },
       { duration: 1.5, x: '-50%', y: '-50%' },
       '-=1',
     )
-    .to(refs.modalEnglishLeftBtn, 0.5, { x: '+500%', scale: 1 }, '-=1')
-    .to(refs.modalEnglishRightBtn, 0.5, { x: '-500%', scale: 1 }, '-=1');
+    .to(refs.modalEnglishLeftBtn, 0.5, { x: '+500%', autoAlpha: 1 }, '-=0.5')
+    .to(refs.modalEnglishRightBtn, 0.5, { x: '-500%', autoAlpha: 1 }, '-=0.5');
 }
 function closeModalEnglishAnimation() {
   var closeModalEnglish = gsap.timeline();
   closeModalEnglish
-    .to(refs.modalEnglishLeftBtn, 0.3, { x: '-500%', scale: 0 })
-    .to(refs.modalEnglishRightBtn, 0.3, { x: '+500%', scale: 0 }, '-=0.3')
+    .to(refs.modalEnglishLeftBtn, 0.3, { x: '-300%', autoAlpha: 0 })
+    .to(refs.modalEnglishRightBtn, 0.3, { x: '300%', autoAlpha: 0 }, '-=0.3')
     .fromTo(
       refs.modalEnglish,
       { x: '-50%', y: '-50%' },
       { duration: 1.5, x: '-50%', y: '0' },
-      '+=0.5',
+      
     )
-    .to(refs.modalEnglishBackdrop, 1, { y: '+100%' }, '-=1');
+    .to(refs.modalEnglishBackdrop, 1, { y: '+100%', autoAlpha: 0 }, '-=1');
 }
 
 function onModalEnglishCloseBtnClick() {
@@ -79,6 +79,7 @@ function onModalEnglishBackdropClick(event) {
   closeModalEnglishAnimation();
 }
 function onModalEnglishLeftBtnClick() {
+  // modalEnglishLeftBtnAnimation();
   changeSlideLeft();
 }
 function onModalEnglishRightBtnClick() {
@@ -184,11 +185,17 @@ function animatingSlideLeft() {
     });
 }
 
+// function modalEnglishLeftBtnAnimation() {
+//  var btnAnimation = gsap.timeline();
+//  btnAnimation
+//     .fromTo(refs.modalEnglishLeftBtn, { scale:1 }, { duration: 0.5, scale:1.5 })
+//     .fromTo(refs.modalEnglishLeftBtn, { scale:1.5 }, { duration: 0.5, scale:1 })
+// }
 // modalPDFdownload
 var showModal = gsap.timeline();
 showModal
   .pause()
-  .to(refs.modalBackdrop, 1, { y: '+100%' })
+  .to(refs.modalBackdrop, 1, { y: '+100%', autoAlpha: 1  })
   .fromTo(
     refs.modal,
     { x: '-50%', y: '-50%' },

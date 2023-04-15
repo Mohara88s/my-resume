@@ -5,6 +5,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
   }
   
   .modalEnglish {
@@ -23,10 +24,10 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    display: flex;
     height: 40px;
     width: 40px;
     padding: 0;
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: $additional-color;
@@ -37,43 +38,54 @@
 
     &:hover,
     &:focus {
+      scale: 1.1;
       fill: $accent-color;
       border: 3px solid $main-color;
+    }
+    &:active {
+      scale: 0.5;
     }
   }
 
   .modalEnglish__LeftBtn,
   .modalEnglish__RightBtn {
     position: absolute;
-    top: 25%;
-    width: 8%;
-    height: 50%;
+    top: 35%;
+    width: 90px;
+    height: 160px;
+    padding: 0;
     background-color: transparent;
-    border: none;   
-    cursor: pointer;
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
-    scale: 0;
-    @include trans-func();
+    cursor: pointer;
+    opacity: 0;
+    // @include trans-func();
     
-    &:hover {
+    &:hover,
+    &:focus {
       fill: $accent-color;
-      scale: 1.2;
     }
     & svg {
-      transform: rotate(-90deg); 
+      @include trans-func();
+      &:hover,
+      &:focus {
+        scale: 1.2;
+      }
+      &:active {
+        scale: 0.5;
+      }
     }
   }
   .modalEnglish__LeftBtn {
-    left: -40%;
+    left: -475px;
     & svg {
       transform: rotate(-90deg); 
     }
   }
   .modalEnglish__RightBtn {
-    right: -40%;
+    right: -475px;
     & svg {
       transform: rotate(90deg); 
     }
@@ -99,6 +111,9 @@
   }
 
   @media print {
+    .modalEnglish__Backdrop {
+      opacity: 1;
+    }
     .modalEnglish {
       top: 0;
       left: 20%;

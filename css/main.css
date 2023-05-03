@@ -764,7 +764,7 @@ section {
 .modalEnglish__LeftBtn,
 .modalEnglish__RightBtn {
   position: absolute;
-  top: 35%;
+  top: 32%;
   width: 90px;
   height: 160px;
   padding: 0;
@@ -800,7 +800,7 @@ section {
 .modalEnglish__LeftBtn svg:hover, .modalEnglish__LeftBtn svg:focus,
 .modalEnglish__RightBtn svg:hover,
 .modalEnglish__RightBtn svg:focus {
-  scale: 1.2;
+  scale: 1.1;
 }
 
 .modalEnglish__LeftBtn svg:active,
@@ -845,6 +845,13 @@ section {
   position: absolute;
   left: 100%;
   top: 0;
+}
+
+@media screen and (min-width: 900px) {
+  .modalEnglish__LeftBtn,
+  .modalEnglish__RightBtn {
+    top: 38%;
+  }
 }
 
 @media print {

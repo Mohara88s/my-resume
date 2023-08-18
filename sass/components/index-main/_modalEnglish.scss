@@ -141,5 +141,8 @@
         width: 730px;
         position: static;
       }
+      & li:last-child {
+        display: none;
+      }
     }
   }

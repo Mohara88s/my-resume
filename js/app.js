@@ -1,4 +1,4 @@
-let slidesQuantity = 3;
+let slidesQuantity = 4;
 let actualSlide = 1;
 let previousSlide = slidesQuantity;
 let isSlideAnimating = false;

@@ -119,11 +119,11 @@
   @media print {
     .modalEnglish__Backdrop {
       opacity: 1;
+      position: relative;
+      margin-left: -350px;
     }
     .modalEnglish {
-      top: 4%;
-      left: 20%;
-      padding: 0;
+      position: relative;
       box-shadow:none;
     }
     .modalEnglish__CloseBtn,

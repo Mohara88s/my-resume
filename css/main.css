@@ -422,6 +422,10 @@ section {
   text-align: center;
 }
 
+.certificateLink {
+  display: inline;
+}
+
 .sectionProjects__list .sectionProjects__item {
   margin-bottom: 10px;
 }

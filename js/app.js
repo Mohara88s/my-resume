@@ -1,4 +1,4 @@
-let slidesQuantity = 5;
+let slidesQuantity = 6;
 let actualSlide = 1;
 let previousSlide = slidesQuantity;
 let isSlideAnimating = false;
@@ -191,6 +191,7 @@ function animatingSlideLeft() {
 //     .fromTo(refs.modalEnglishLeftBtn, { scale:1 }, { duration: 0.5, scale:1.5 })
 //     .fromTo(refs.modalEnglishLeftBtn, { scale:1.5 }, { duration: 0.5, scale:1 })
 // }
+
 // modalPDFdownload
 var showModal = gsap.timeline();
 showModal

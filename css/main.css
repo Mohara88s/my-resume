@@ -439,6 +439,15 @@ section {
   margin: 0;
 }
 
+.qrCode {
+  display: none;
+  width: 129px;
+  height: 129px;
+  position: absolute;
+  bottom: 30px;
+  right: 70px;
+}
+
 .strip--top,
 .strip--bottom {
   width: 100%;
@@ -550,6 +559,9 @@ section {
     bottom: 0;
     border-bottom: 3px solid #272727;
   }
+  .qrCode {
+    display: block;
+  }
   .strip--top,
   .strip--bottom {
     width: 1200px;
@@ -614,6 +626,10 @@ section {
     bottom: 0;
     border: none;
     border-bottom: 3px solid #272727;
+  }
+  .qrCode {
+    display: block;
+    right: 150px;
   }
   .strip--top {
     margin-top: 40px;
@@ -889,7 +905,7 @@ section {
     width: 680px;
     position: static;
   }
-  .certificatesList li:last-child {
+  .certificatesList li:nth-child(n+4) {
     display: none;
   }
 }

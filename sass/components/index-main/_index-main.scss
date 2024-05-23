@@ -67,6 +67,15 @@ display: inline;
     border: none;
     margin: 0;
 }
+.qrCode {
+    display: none;
+    width: 129px;
+    height: 129px;
+    position: absolute;
+    bottom: 30px;
+    right: 70px;
+}
+
 
 .strip--top,
 .strip--bottom {
@@ -161,7 +170,9 @@ display: inline;
         bottom: 0;
         border-bottom: 3px solid $main-color;
     }
-
+    .qrCode{
+        display: block;
+    }
     .strip--top,
     .strip--bottom {
         width: 1200px;
@@ -220,7 +231,11 @@ display: inline;
         border: none;
         border-bottom: 3px solid $main-color;
     }
+    .qrCode{
+        display: block;
+        right: 150px;
 
+    }
     .strip--top {
         margin-top: 40px;
     }

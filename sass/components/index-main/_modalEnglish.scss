@@ -142,7 +142,7 @@
         width: 680px;
         position: static;
       }
-      & li:last-child {
+      & li:nth-child(n+4) {
         display: none;
       }
     }

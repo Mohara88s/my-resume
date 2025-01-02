@@ -686,7 +686,6 @@ section {
 }
 
 .modalPDFdownload__CloseBtn:hover, .modalPDFdownload__CloseBtn:focus {
-  scale: 1.1;
   fill: #C2331A;
   border: 3px solid #272727;
 }
@@ -773,7 +772,6 @@ section {
 }
 
 .modalEnglish__CloseBtn:hover, .modalEnglish__CloseBtn:focus {
-  scale: 1.1;
   fill: #C2331A;
   border: 3px solid #272727;
 }

@@ -9,21 +9,20 @@ section {
 .foto {
     
     object-fit:cover;
-    max-height: 100%;
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 20px;
 }
 
 .mainInfo {
-    padding-top: 10px;
-    padding-bottom: 20px;
     text-align: center;
     &__name {
         font-family: $accent-font;
         font-weight: 500;
         text-transform: uppercase;
         letter-spacing: 0.03em;
-        font-size: 95px;
+        font-size: 85px;
         margin-bottom: 10px;
     }
     &__specialization{
@@ -34,6 +33,9 @@ section {
         letter-spacing: 0.1em;
         font-size: 30px;
         margin-bottom: 40px;
+    }
+    &__specialization{
+        margin-bottom: 20px;
     }
 }
 
@@ -125,7 +127,8 @@ display: inline;
         display: flex;
     }
     .foto {
-        max-height: 500px; 
+        margin-top: 30px;
+        max-height: 350px; 
     }
     .headerSection {
         padding-left: 40px;
@@ -147,10 +150,10 @@ display: inline;
             margin-right: 40px;
         }
         .sectionsList__item:first-child{
-            width: 38%;
+            width: 44%;
         }
         .sectionsList__item:nth-child(2){
-            width: 38%;
+            width: 32%;
         }
         .sectionsList__item:last-child{
             width: 24%;
@@ -171,7 +174,7 @@ display: inline;
         border-bottom: 3px solid $main-color;
     }
     .qrCode{
-        display: block;
+        display: none;
     }
     .strip--top,
     .strip--bottom {
@@ -184,7 +187,8 @@ display: inline;
         display: flex;
     }
     .foto {
-        max-height: 500px; 
+        margin-top: 30px;
+        max-height: 350px; 
     }
     .headerSection {
         padding-left: 40px;
@@ -206,10 +210,10 @@ display: inline;
             margin-right: 40px;
         }
         .sectionsList__item:first-child{
-            width: 38%;
+            width: 44%;
         }
         .sectionsList__item:nth-child(2){
-            width: 38%;
+            width: 32%;
         }
         .sectionsList__item:last-child{
             width: 24%;

@@ -284,7 +284,6 @@ ul {
 }
 
 a {
-  text-decoration: none;
   color: inherit;
   display: block;
   cursor: pointer;
@@ -411,6 +410,11 @@ section {
   display: inline-block;
 }
 
+.sectionWorkExperience .experience__list {
+  list-style-type: disc;
+  padding-left: 1rem;
+}
+
 .sections__line {
   border: none;
   margin: 0;
@@ -511,16 +515,16 @@ section {
     display: flex;
   }
   .sectionsList .sectionsList__item {
-    margin-right: 40px;
+    margin-right: 35px;
   }
   .sectionsList .sectionsList__item:first-child {
-    width: 44%;
+    width: 46%;
   }
   .sectionsList .sectionsList__item:nth-child(2) {
-    width: 32%;
+    width: 34%;
   }
   .sectionsList .sectionsList__item:last-child {
-    width: 24%;
+    width: 20%;
     margin-right: 0;
   }
   .sections__container {
@@ -577,16 +581,16 @@ section {
     display: flex;
   }
   .sectionsList .sectionsList__item {
-    margin-right: 40px;
+    margin-right: 35px;
   }
   .sectionsList .sectionsList__item:first-child {
-    width: 44%;
+    width: 46%;
   }
   .sectionsList .sectionsList__item:nth-child(2) {
-    width: 32%;
+    width: 34%;
   }
   .sectionsList .sectionsList__item:last-child {
-    width: 24%;
+    width: 20%;
     margin-right: 0;
   }
   .sections__container {

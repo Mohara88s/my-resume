@@ -1,11 +1,13 @@
 p {
     margin-bottom: 10px;
 }
+
 section {
     display: block;
     padding-top: 10px;
     padding-bottom: 15px;
 }
+
 .foto {
     
     object-fit:cover;
@@ -54,21 +56,33 @@ section {
     letter-spacing: 0.1em;
     text-align: center;
 }
+
 .certificateLink {
 display: inline;
 }
+
 .sectionProjects__list {
     .sectionProjects__item {
         margin-bottom: 10px;
     }
 }
+
 .sectionProjects__link {
     display: inline-block;
 }
+
+.sectionWorkExperience {
+    .experience__list{
+        list-style-type: disc;
+        padding-left: 1rem; 
+    }
+}
+
 .sections__line {
     border: none;
     margin: 0;
 }
+
 .qrCode {
     display: none;
     width: 129px;
@@ -89,12 +103,14 @@ display: inline;
     border: none;
     border-bottom: 30px solid $additional-color;
 }
+
 .functionalButtonsBox{
     position: absolute;
     top:30px;
     right: 10px;
   
 }
+
 .modalPDFdownload__OpenBtn{
     width: 60px;  
     margin-bottom: 20px;  
@@ -108,6 +124,7 @@ display: inline;
         transform: translateX(0);
     }
 }
+
 .print {
     width: 60px;
     cursor: pointer;
@@ -147,16 +164,16 @@ display: inline;
     .sectionsList {
         display: flex;
         .sectionsList__item{
-            margin-right: 40px;
+            margin-right: 35px;
         }
         .sectionsList__item:first-child{
-            width: 44%;
+            width: 46%;
         }
         .sectionsList__item:nth-child(2){
-            width: 32%;
+            width: 34%;
         }
         .sectionsList__item:last-child{
-            width: 24%;
+            width: 20%;
             margin-right: 0;
         }
     }
@@ -207,16 +224,16 @@ display: inline;
     .sectionsList {
         display: flex;
         .sectionsList__item{
-            margin-right: 40px;
+            margin-right: 35px;
         }
         .sectionsList__item:first-child{
-            width: 44%;
+            width: 46%;
         }
         .sectionsList__item:nth-child(2){
-            width: 32%;
+            width: 34%;
         }
         .sectionsList__item:last-child{
-            width: 24%;
+            width: 20%;
             margin-right: 0;
         }
     }
